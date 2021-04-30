@@ -61,6 +61,20 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+				<!-- Build an executable JAR -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<classpathPrefix>lib/</classpathPrefix>
+							<mainClass>com.example.testproject.TestProjectApplication</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
 <!--			<plugin>-->
 <!--				<groupId>com.spotify</groupId>-->
 <!--				<artifactId>dockerfile-maven-plugin</artifactId>-->
